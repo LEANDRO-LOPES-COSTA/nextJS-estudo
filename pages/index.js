@@ -1,12 +1,12 @@
-
+import Link from 'next/link';
 
 function Home () {
     return (
         <div> 
             <h4> Home </h4> 
-                     
-                <a href="/sobre">Acessar página Sobre</a>  
-                     
+            <Link href="/sobre">        
+                <a>Acessar página Sobre</a>  
+            </Link>          
         </div>
 
     )
