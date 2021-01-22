@@ -14,16 +14,17 @@ function Tempo (props){
 
 export async function getStaticProps() {
     console.log('Passando pelo getStatic Props()');
-    console.log('Adicionando delay de 5 segundos');
+   // console.log('Adicionando delay de 5 segundos');
 
-    await delay(5000);
+   // await delay(5000);
     const dynamicDate = new Date();
     const staticDateString = dynamicDate.toGMTString();
 
     return {
         props: {
             staticDateString
-        }
+        },
+        revalidate: 1  // revalida pagina statica a cada 1 segundo
     }
 }
 
